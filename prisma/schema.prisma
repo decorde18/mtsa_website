@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// Auth.js required models (Credentials + Prisma adapter)
+// ─────────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String? // null if user only ever signs in via OAuth in the future
+
+  accounts Account[]
+  sessions Session[]
+  userRoles UserRole[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Used for both password-reset and email-verification links
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expires   DateTime
+  createdAt DateTime @default(now())
+}
+
+// ─────────────────────────────────────────────
+// Roles — separate table, NOT a field on User.
+// A person can hold multiple role stints over time
+// (e.g. coach in 2023, inactive, coach again in 2025),
+// each with its own active flag and date range.
+// ─────────────────────────────────────────────
+
+enum RoleType {
+  COACH
+  PLAYER
+  PARENT
+  ADMIN
+}
+
+model UserRole {
+  id        String    @id @default(cuid())
+  userId    String
+  type      RoleType
+  active    Boolean   @default(true)
+  startDate DateTime  @default(now())
+  endDate   DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, type])
+  @@index([type, active])
+}
+
+// ─────────────────────────────────────────────
+// Example domain model — delete or replace per app
+// ─────────────────────────────────────────────
+
+model ExampleItem {
+  id        String   @id @default(cuid())
+  title     String
+  createdAt DateTime @default(now())
+}
