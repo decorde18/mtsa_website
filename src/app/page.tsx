@@ -1,35 +1,36 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
+import { Navbar } from "@/components/mtsa/Navbar";
+import { HeroSection } from "@/components/mtsa/HeroSection";
+import { WhatsNextSection } from "@/components/mtsa/WhatsNextSection";
+import { RegistrationGuideSection } from "@/components/mtsa/RegistrationGuideSection";
+import { DivisionsSection } from "@/components/mtsa/DivisionsSection";
+import { LocationsSection } from "@/components/mtsa/LocationsSection";
+import { RulesSection } from "@/components/mtsa/RulesSection";
+import { MissionAboutSection } from "@/components/mtsa/MissionAboutSection";
+import { MobileStickyBar } from "@/components/mtsa/MobileStickyBar";
+import { Footer } from "@/components/mtsa/Footer";
 
 export default function Home() {
   return (
-    <main className='mx-auto flex max-w-2xl flex-col gap-6 p-10'>
-      <Card>
-        <CardHeader>
-          <CardTitle>App Blueprint</CardTitle>
-          <CardDescription>
-            Starting point — replace this page with your app's real landing
-            content.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className='flex flex-wrap items-center gap-3'>
-          <Button variant='primary'>Primary</Button>
-          <Button variant='secondary'>Secondary</Button>
-          <Button variant='outline'>Outline</Button>
-          <Button variant='ghost'>Ghost</Button>
-          <Button variant='destructive'>Destructive</Button>
-          <Badge variant='primary'>Coach</Badge>
-          <Badge variant='accent'>Parent</Badge>
-          <Badge variant='outline'>Player</Badge>
-        </CardContent>
-      </Card>
-    </main>
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800">
+      {/* Top Navigation */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main className="flex-1">
+        <HeroSection />
+        <WhatsNextSection />
+        <RegistrationGuideSection />
+        <DivisionsSection />
+        <LocationsSection />
+        <RulesSection />
+        <MissionAboutSection />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Mobile Sticky Quick Action Bar */}
+      <MobileStickyBar />
+    </div>
   );
 }

@@ -1,17 +1,50 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: "App Blueprint",
-  description: "Next.js app blueprint",
+  title: "Middle Tennessee Soccer Alliance | MTSA Soccer",
+  description:
+    "Middle Tennessee Soccer Alliance (MTSA) - Nashville's premier competitive adult soccer league operated in partnership with TNSoccer. Open, Over 30, Over 40, Over 50, and 7v7 divisions.",
+  keywords: [
+    "MTSA",
+    "Middle Tennessee Soccer Alliance",
+    "Nashville adult soccer",
+    "Tennessee Soccer",
+    "TNSoccer",
+    "PlayMetrics adult soccer",
+    "adult soccer league Nashville",
+    "Over 30 soccer",
+    "Over 40 soccer",
+    "Over 50 soccer",
+    "Nashville soccer fields",
+  ],
+  authors: [{ name: "Middle Tennessee Soccer Alliance" }],
+  openGraph: {
+    title: "Middle Tennessee Soccer Alliance | MTSA Soccer",
+    description:
+      "Nashville's premier competitive adult soccer league. Powered by TNSoccer and PlayMetrics.",
+    url: "https://www.mtsasoccer.com/",
+    siteName: "MTSA Soccer",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0b1528",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
+      <body className="antialiased text-slate-800 bg-slate-50 selection:bg-blue-600 selection:text-white">
+        {children}
       </body>
     </html>
   );
