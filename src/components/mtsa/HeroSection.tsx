@@ -73,6 +73,9 @@ export function HeroSection() {
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
               <span>Full USSF 3-referee crews for 11v11</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
               <span>USSF referee for 7v7</span>
             </div>
             <div className="flex items-center gap-2">
