@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Middle Tennessee Soccer Alliance | MTSA Soccer",
   description:
-    "Middle Tennessee Soccer Alliance (MTSA) - Nashville's premier competitive adult soccer league operated in partnership with TNSoccer. Open, Over 30, Over 40, Over 50, and 7v7 divisions.",
+    "Middle Tennessee Soccer Alliance (MTSA) - Middle Tennessee's premier competitive adult soccer league operated in partnership with TNSoccer. Open, Over 30, Over 40, and Over 50.",
   keywords: [
     "MTSA",
     "Middle Tennessee Soccer Alliance",
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     "Over 30 soccer",
     "Over 40 soccer",
     "Over 50 soccer",
-    "Nashville soccer fields",
   ],
   authors: [{ name: "Middle Tennessee Soccer Alliance" }],
   openGraph: {
