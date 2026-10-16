@@ -72,7 +72,8 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <span>Full USSF 3-referee crews</span>
+              <span>Full USSF 3-referee crews for 11v11</span>
+              <span>USSF referee for 7v7</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
@@ -87,8 +88,8 @@ export function HeroSection() {
             <div className="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
               <Trophy className="w-5 h-5" />
             </div>
-            <div className="text-xl sm:text-2xl font-black text-white">5+ Divisions</div>
-            <div className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Open, O30, O40, O50, 7v7</div>
+            <div className="text-xl sm:text-2xl font-black text-white">4 Divisions</div>
+            <div className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Open, O30, O40, O50</div>
           </div>
 
           <div className="bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-4 sm:p-5">
@@ -103,8 +104,8 @@ export function HeroSection() {
             <div className="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center mb-3">
               <MapPin className="w-5 h-5" />
             </div>
-            <div className="text-xl sm:text-2xl font-black text-white">6 Locations</div>
-            <div className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Nashville, Bellevue, Williamson</div>
+            <div className="text-xl sm:text-2xl font-black text-white">Locations</div>
+            <div className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Nashville, Williamson</div>
           </div>
 
           <div className="bg-slate-800/60 backdrop-blur-md border border-slate-700/60 rounded-2xl p-4 sm:p-5">

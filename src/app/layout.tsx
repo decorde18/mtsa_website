@@ -26,6 +26,15 @@ export const metadata: Metadata = {
     siteName: "MTSA Soccer",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.png?v=2", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/mtsa-logo.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2",
+  },
 };
 
 export const viewport: Viewport = {
