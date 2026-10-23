@@ -148,14 +148,14 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400">
               <li>
                 <span className="block text-slate-500 text-[11px] font-semibold">Phone:</span>
-                <a href="tel:615-306-2827" className="text-slate-300 hover:text-white">
-                  615-306-2827
+                <a href="tel:615-241-0816" className="text-slate-300 hover:text-white">
+                  615-241-0816
                 </a>
               </li>
               <li>
                 <span className="block text-slate-500 text-[11px] font-semibold">Email:</span>
-                <a href="mailto:info@mtsasoccer.com" className="text-slate-300 hover:text-white">
-                  info@mtsasoccer.com
+                <a href="mailto:mtsaexecutivedirector@gmail.com" className="text-slate-300 hover:text-white">
+                  mtsaexecutivedirector@gmail.com
                 </a>
               </li>
               <li className="pt-2">

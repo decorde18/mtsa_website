@@ -101,19 +101,19 @@ export function MissionAboutSection() {
 
               <div className="space-y-3.5 text-xs sm:text-sm">
                 <a
-                  href="tel:615-306-2827"
+                  href="tel:615-241-0816"
                   className="flex items-center gap-3 p-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-blue-400" />
-                  <span className="font-semibold text-white">615-306-2827</span>
+                  <span className="font-semibold text-white">615-241-0816</span>
                 </a>
 
                 <a
-                  href="mailto:info@mtsasoccer.com"
+                  href="mailto:mtsaexecutivedirector@gmail.com"
                   className="flex items-center gap-3 p-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors"
                 >
                   <Mail className="w-4 h-4 text-blue-400" />
-                  <span className="font-semibold text-white">info@mtsasoccer.com</span>
+                  <span className="font-semibold text-white">mtsaexecutivedirector@gmail.com</span>
                 </a>
 
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-white/10 border border-white/10 text-slate-300">

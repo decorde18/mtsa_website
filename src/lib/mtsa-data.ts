@@ -250,7 +250,7 @@ export const LOCATIONS: FieldLocation[] = [
     state: "TN",
     zip: "37203",
     fields: ["Soccer Stadium Field"],
-    surface: "Artificial Turf",
+    surface: "Turf",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=E.S.+Rose+Park+1000+Edgehill+Ave+Nashville+TN+37203",
     notes: "Premier lighted synthetic turf stadium located in the Edgehill community near Belmont and Downtown Nashville.",
   },
